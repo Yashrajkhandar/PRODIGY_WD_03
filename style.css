@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 20px 0 10px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.mode {
+  margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.mode label {
+  margin: 0 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.status {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #f8f8f8;
+  background-color: rgba(255,255,255,0.1);
+  padding: 8px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000050;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 5px #00000050;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px #ffffff30;
+}
+
+.cell.x {
+  color: #00bfff;
+  text-shadow: 0 0 5px #00bfff80;
+}
+
+.cell.o {
+  color: #ff4c4c;
+  text-shadow: 0 0 5px #ff4c4c80;
+}
+
+button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
